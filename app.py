@@ -37,5 +37,6 @@ async def create_books(book:Book):
 async def book_id(id: int):
     for book in a:
         if book.id == id:
-            return book
-    return status.HTTP_404_NOT_FOUND
+            return book, status.HTTP_200_OK
+        elif book.id != id:
+            return status.HTTP_404_NOT_FOUND
