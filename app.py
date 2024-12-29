@@ -1,11 +1,12 @@
 from fastapi import FastAPI, status
 from pydantic import BaseModel
+from typing import Optional
 
 app=FastAPI()
 
 class Book(BaseModel):
     id: int
-    name:str
+    name:str = None
     author:str = None
     year:int = None
     number:int
