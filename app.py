@@ -6,8 +6,8 @@ app=FastAPI()
 
 class Book(BaseModel):
     id: int
-    name:str = None
-    author:str = None
+    name:str
+    author:str
     year:int = None
     number:int
 
