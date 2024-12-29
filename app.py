@@ -27,11 +27,11 @@ async def books():
 @app.post("/books/")
 async def create_books(book:Book):
     for book in a:
-        if book.id == id:
-            return status.HTTP_400_BAD_REQUEST
-        else:
+        if book.id != id:
             a.append(book)
-    return a
+            return a
+        else:
+            return status.HTTP_400_BAD_REQUEST  
 
 
 @app.get("/book/{id}", response_model=Book)
