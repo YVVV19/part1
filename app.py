@@ -28,7 +28,7 @@ async def books():
 async def create_books(book:Book):
     for book in a:
         if book.id == id:
-            return status.HTTP_201_CREATED
+            return status.HTTP_400_BAD_REQUEST
         else:
             a.append(book)
     return a
